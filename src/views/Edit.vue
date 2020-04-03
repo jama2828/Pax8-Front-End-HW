@@ -1,20 +1,33 @@
 <template>
-    <div>
+    <div class="container">
+        <h1 class="title is-2">{{company.name}}</h1>
         <form @submit="editCompany">
-            <h1>{{company.name}}</h1>
-            <p>Domain</p>
-            <input type="text" v-model="domain" name ="Domain"
-            :placeholder="[[ company.domain ]]">
-            <br/>
-            <p>Number of Employees</p>
-            <input type="text" v-model="numberOfEmployees" name ="numberOfEmployees"
-            :placeholder="[[ company.numberOfEmployees ]]">
-            <br/>
-            <p>Subscriptions per Employee</p>
-            <input type="text" v-model="subscriptionsPerEmployee" name ="subscriptionsPerEmployees"
-            :placeholder="[[ company.subscriptionsPerEmployee ]]">
-            <br/>
-            <input type="submit" value="Submit">
+          <div class="field">
+            <label class="label">Domain</label>
+            <div class="control">
+              <input class="input" type="text" v-model="domain" name ="Domain"
+              :placeholder="[[ company.domain ]]">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Number of Employees</label>
+            <div class="control">
+              <input type="text" v-model="numberOfEmployees" name ="numberOfEmployees"
+              :placeholder="[[ company.numberOfEmployees ]]" class="input">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Subscriptions per Employee</label>
+            <div class="control">
+              <input v-model="subscriptionsPerEmployee" name ="subscriptionsPerEmployees"
+              :placeholder="[[ company.subscriptionsPerEmployee ]]" class="input" type="text">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input type="submit" value="Submit" class="button is-success">
+            </div>
+          </div>
         </form>
     </div>
 </template>

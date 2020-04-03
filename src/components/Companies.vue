@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <div v-for="company in companies" v-bind:key="company.id">
             <Company v-bind:company="company"/>
         </div>
